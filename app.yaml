@@ -1,0 +1,8 @@
+runtime: python39  # Gunakan runtime Python 3.9
+entrypoint: serve -p $PORT  # Untuk aplikasi statis
+handlers:
+- url: /
+  static_files: index.html
+  upload: index.html
+- url: /
+  static_dir: .
